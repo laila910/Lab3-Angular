@@ -2,11 +2,14 @@
  <div class="form-group mt-3">
     <label for="exampleInputName">Name</label>
     <input type="text" class="form-control" id="exampleInputName" name="name" [(ngModel)]="name" placeholder="Enter Name..">
-    <div style="color: red;" *ngIf="name.length < 3">
+    <div style="color: red;" *ngIf="name.length < 3&& name!=''">
         *Name Length Must be &gt; 3
     </div>
     <div style="color: red;" *ngIf="name==''">
         *Name Required
+    </div>
+    <div style="color: green;" *ngIf="name.length >= 3 && name!=''">
+        *Valid Name :)
     </div>
   </div>
 
@@ -16,6 +19,10 @@
     <div style="color: red;" *ngIf="age < 20 || age > 40">
         *Age Must be between 20 and 40 
     </div>
+    <div style="color: green;" *ngIf="age >= 20 && age <=40">
+        *Valid Age
+    </div>
+
   </div>
   <button type="submit" class="btn btn-primary mt-3 mb-3" (click)="AddNewStudent()">Submit</button>
   <!-- Register Form End -->
