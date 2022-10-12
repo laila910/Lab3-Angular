@@ -1,0 +1,14 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of DataFromParent"> 
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+      </tr>
+    </tbody>
+  </table>

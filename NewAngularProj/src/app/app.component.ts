@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'NewAngularProj';
+
+  AllStudents: {name:string, age:number}[] = [];
+
+  GetData(data:any){
+    //  this.DataFromReg = data; 
+     this.AllStudents.push(data);
+     console.log(this.AllStudents);
+  }
 }
